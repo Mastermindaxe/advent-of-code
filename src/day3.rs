@@ -17,7 +17,7 @@ pub fn solve_part1(input: &Vec<Vec<char>>) -> Result<usize, Box<dyn Error>> {
 pub fn solve_part2(input: &Vec<Vec<char>>) -> Result<usize, Box<dyn Error>> {
     let values: Vec<(usize, usize)> = vec![(1, 1), (3, 1), (5, 1), (7, 1), (1, 2)];
     let mut result = 1;
-    let new: Vec<()> = values
+    let _: Vec<()> = values
         .iter()
         .map(|val| go_down_slope(val.0, val.1, input))
         .map(|val| result = val.unwrap() * result)
