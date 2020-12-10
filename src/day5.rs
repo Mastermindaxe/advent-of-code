@@ -1,9 +1,9 @@
-use self::regex::Regex;
-use std::collections::{BTreeSet, HashMap, HashSet};
-use std::error::Error;
-use std::slice::SliceIndex;
-
 extern crate regex;
+
+use std::collections::BTreeSet;
+use std::error::Error;
+
+use self::regex::Regex;
 
 type BinarySearch = Vec<bool>;
 
@@ -50,7 +50,7 @@ pub fn solve_part1(input: &[(BinarySearch, BinarySearch)]) -> Result<usize, Box<
 
 #[aoc(day5, part2)]
 pub fn solve_part2(input: &[(BinarySearch, BinarySearch)]) -> Result<usize, Box<dyn Error>> {
-    let mut result: usize = 0;
+    let result: usize = 0;
     let mut set: BTreeSet<usize> = BTreeSet::new();
     for x in input {
         let value = binary_search_in(127, &x.0) * 8 + binary_search_in(7, &x.1);

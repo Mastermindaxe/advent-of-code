@@ -1,10 +1,11 @@
-use self::regex::Regex;
+extern crate regex;
+
 use core::fmt;
 use std::collections::HashSet;
 use std::error::Error;
 use std::fmt::{Display, Formatter};
 
-extern crate regex;
+use self::regex::Regex;
 
 #[derive(Debug, Eq, PartialEq, Hash, Copy, Clone)]
 pub enum Instr {

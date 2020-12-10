@@ -1,8 +1,9 @@
-use self::regex::Regex;
+extern crate regex;
+
 use std::collections::HashMap;
 use std::error::Error;
 
-extern crate regex;
+use self::regex::Regex;
 
 #[aoc_generator(day4)]
 pub fn generator_part1(input: &str) -> Vec<HashMap<String, String>> {

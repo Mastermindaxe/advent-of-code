@@ -85,7 +85,7 @@ pub fn is_new_valid_pw(input: &Input) -> bool {
 
 #[cfg(test)]
 pub mod tests {
-    use crate::day2::{is_valid_pw, Input};
+    use crate::day2::{Input, is_valid_pw};
 
     #[test]
     fn test01() {
@@ -94,7 +94,7 @@ pub mod tests {
                 lower: 1usize,
                 upper: 3usize,
                 ch: 'a',
-                pass: "abcde".to_string()
+                pass: "abcde".to_string(),
             }),
             true
         );
@@ -107,7 +107,7 @@ pub mod tests {
                 lower: 1usize,
                 upper: 3usize,
                 ch: 'a',
-                pass: "abcde".to_string()
+                pass: "abcde".to_string(),
             }),
             true
         );

@@ -1,8 +1,10 @@
-use self::regex::Regex;
+extern crate regex;
+
 use std::collections::HashSet;
 use std::error::Error;
 
-extern crate regex;
+use self::regex::Regex;
+
 
 #[aoc_generator(day9)]
 pub fn generator_part1(input: &str) -> Vec<usize> {
@@ -55,8 +57,7 @@ pub fn get_any_sum(input: &mut [usize], number: usize) -> HashSet<usize> {
         } else if curr + curr_sum == number {
             set.insert(curr);
             return set;
-        } else if curr + curr_sum > number {
-        }
+        } else if curr + curr_sum > number {}
         i += 1;
     }
 
@@ -101,9 +102,9 @@ pub mod tests {
 309
 576"#
                 ),
-                5
+                5,
             )
-            .unwrap()
+                .unwrap()
         );
     }
 
