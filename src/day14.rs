@@ -6,14 +6,14 @@ use self::regex::Regex;
 
 #[derive(Clone, Ord, PartialOrd, Eq, PartialEq)]
 pub struct MaskWithInstr {
-    mask: String,
-    instr: Vec<Instruction>,
+    pub mask: String,
+    pub instr: Vec<Instruction>,
 }
 
 #[derive(Copy, Clone, Ord, PartialOrd, Eq, PartialEq)]
 pub struct Instruction {
-    reg: usize,
-    dec_value: usize,
+    pub reg: usize,
+    pub dec_value: usize,
 }
 
 #[aoc_generator(day14)]
